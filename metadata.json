@@ -1,0 +1,7 @@
+{
+  "name": "FashionAI Designer",
+  "description": "An AI-powered design studio to create patterns, analyze fabrics, and visualize outfits on virtual models of various sizes.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
