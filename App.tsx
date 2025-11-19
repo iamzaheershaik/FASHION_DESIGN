@@ -32,17 +32,17 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 font-sans text-slate-200">
+    <div className="min-h-screen bg-neo-bg font-sans text-neo-black pattern-grid-lg">
       <Header user={user} onSignIn={handleSignIn} />
-      <main>
+      <main className="pb-20">
         {view === 'landing' ? (
           <LandingPage onTryForFree={navigateToStudio} />
         ) : (
           <Studio user={user} />
         )}
       </main>
-      <footer className="text-center py-6 mt-8 border-t border-slate-800">
-        <p className="text-slate-500 text-sm">Powered by Gemini AI. The Future of Textile Design.</p>
+      <footer className="text-center py-8 border-t-3 border-neo-black bg-white mt-12">
+        <p className="text-neo-black font-bold font-display">Powered by Gemini AI. Crafted with style.</p>
       </footer>
     </div>
   );

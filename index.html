@@ -2,24 +2,63 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FashionAI Designer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-  <script type="importmap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+            },
+            colors: {
+              neo: {
+                bg: '#FFFBF0', // Warm white
+                white: '#FFFFFF',
+                black: '#121212',
+                yellow: '#FFDE59',
+                pink: '#FF90E8',
+                green: '#7FDBCA',
+                purple: '#C084FC',
+                blue: '#54C7EC',
+                orange: '#FFBD12',
+              }
+            },
+            boxShadow: {
+              'neo': '4px 4px 0 0 #121212',
+              'neo-sm': '2px 2px 0 0 #121212',
+              'neo-lg': '8px 8px 0 0 #121212',
+              'neo-hover': '2px 2px 0 0 #121212', // For active states
+            },
+            borderWidth: {
+              '3': '3px',
+            }
+          }
+        }
+      }
+    </script>
+    <script type="importmap">
 {
   "imports": {
     "react/": "https://aistudiocdn.com/react@^19.1.1/",
     "react": "https://aistudiocdn.com/react@^19.1.1",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
     "@google/genai": "https://aistudiocdn.com/@google/genai@^1.16.0",
-    "jspdf": "https://esm.sh/jspdf@2.5.1"
+    "jspdf": "https://esm.sh/jspdf@2.5.1",
+    "vite": "https://aistudiocdn.com/vite@^7.2.2",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
   }
 }
 </script>
 </head>
-  <body class="bg-slate-900 text-slate-200">
+  <body class="bg-neo-bg text-neo-black selection:bg-neo-pink selection:text-neo-black">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
